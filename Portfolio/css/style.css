@@ -30,7 +30,7 @@ p {
 .navbar ul {
 
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     list-style: none;
 }
 
@@ -58,13 +58,13 @@ p {
 }
 
 @media only screen and (max-width: 400px) {
-    .descrizione {
+    .description {
        max-width: 90%;
        margin-left: 10px;
      }
  }
 
-#presentazione{
+#presentation{
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -75,7 +75,7 @@ p {
     font-size: 1.5em;
 }
 
-.descrizione{
+.description{
     display: flex;
     width: auto;
     flex-direction: column;
@@ -201,7 +201,7 @@ p {
 }
 
 
-.abilita{
+.parentskills{
 
     flex-direction: row;
     display: flex;
@@ -225,7 +225,7 @@ p {
 }
 
 
-.immaginicompetenze {
+.imagesskills {
 
     flex-direction:column ;
     height: 500px;
@@ -245,7 +245,7 @@ p {
 .css {  height: 100px; width: 100px;
 }
 
-.projects{
+.parentprojects{
 
     flex-direction: row;
     display: flex;
@@ -256,10 +256,10 @@ p {
     background-color: white;
     padding: 0rem 0 12rem;
 }
-.progetti h1{
+.projects h1{
     margin-bottom: 10%;
 }
-.progetti {
+.projects {
     
     flex-direction:row;
     justify-content: center;
@@ -269,7 +269,7 @@ p {
     margin-top: 10%;
 }
 
-.progetti p{color: #272341}
+.porojects p{color: #272341}
 
 .about{
 
@@ -311,10 +311,18 @@ p {
 
 }
 
-.about h3,p{
+.about h5,h4,p{
     color: white;
 }
 
+h4{
+    font-size: 1.8em;
+    margin-bottom: 5%;
+}
+
+h5{
+    font-size: 1.5em;
+}
 
 .mypic{     
 
@@ -324,15 +332,15 @@ p {
 
 
 
-.contacts{
-    margin-top: 15%;
-    margin-bottom: 25%;
+.contactsparent{
+
+    margin: 15% 15% 15%;
     justify-content: center;
     display: flex;
 
 }
 
-.contatti{
+.contacts{
 
     display: flex;
     width: 1000px;
@@ -344,6 +352,13 @@ p {
     background-color: white;
     margin-top: 10%;
 }
+
+h6{
+
+    font-size: 1.8em;
+
+}
+
 #email {
     margin-top: 10px;
     margin-bottom: 30px;
