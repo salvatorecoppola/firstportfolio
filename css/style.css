@@ -49,36 +49,16 @@ p {
       text-align: center;
     }
 }
-@media only screen and (max-width: 400px) {
-    .description {
-       max-width: 90%;
-       margin-left: 10px;
-     }
- }
-
-
+/*navbar end*/ 
 .home{
-
     margin-top: 15%;
-}
-
-.home::before{
-    content: '';
-    position: absolute;
-    left:0;
-    width: 100%;
-    height: 100%;
-
 }
 
 .home .home-text{
     text-align: center;
-    position: relative;
-    z-index: 2;
 }
 
 .home .home-text h1{
-   color:#1F2937;
    font-size: 50px;
    color:#1F2937;
    line-height: 56px;
@@ -86,7 +66,7 @@ p {
    margin:0 0 20px;
 }
 .home .home-text p{
-   margin:0;
+   margin-bottom:0;
    overflow: hidden;
 }
 .home .home-text p span{
@@ -101,10 +81,10 @@ p {
 .home .home-text p span.text-in{
    display: block;
    animation: textIn .5s ease;
-   margin-bottom: 10px;
 }
 .home .home-text p span.text-out{
    animation: textOut .5s ease;
+   
 }
 @keyframes textIn{
    0%{
@@ -124,16 +104,6 @@ p {
    }
 }
 
-
-@media only screen and (max-width: 400px) {
-    .bio ul {
-       height: 350px;
-       flex-direction: column;
-       text-align: center;
-       justify-content: center;
- 
-    }
-}
 .bio{
     margin-top: 10%;
     text-align: center;
@@ -149,12 +119,32 @@ p {
 
 @media only screen and (max-width: 826px) { 
     .bio ul {
-           height: 350px; /* Red */
+           height: 350px;
            flex-direction: column;
            text-align: center;
            justify-content: center; }
 }
 
+@media only screen and (max-width: 400px) {
+    .bio ul {
+       height: 350px;
+       flex-direction: column;
+       text-align: center;
+       justify-content: center;
+ 
+    }
+}
+/*if you have problem with span in h1, try fix height*/
+
+@media only screen and (max-width: 400px) {
+    .home .home-text p span {
+       height: 90px;
+       flex-direction: column;
+       text-align: center;
+       justify-content: center;
+ 
+    }
+}
 /*buttons starts*/
 
 .button {
@@ -225,7 +215,7 @@ p {
     text-decoration: none;
 }
 
-/*navbar end*/ /*buttons ends*/
+/*buttons ends*/
 
 /*skills section start*/
 
@@ -344,7 +334,7 @@ p {
         
     }
 }
-.me{
+.mypic{
 
     height: 500px;
     width: 600px;
@@ -354,7 +344,7 @@ p {
 }
 /*img don't available for smartphones and tablets*/
 @media only screen and (max-width: 600px){
-    .img {
+    .mypic {
         height: 100%;
         width: 80%;
         display: none;
@@ -374,10 +364,17 @@ h4{
 h5{
     font-size: 1.3em;
 }
-.mypic{     
+.me{     
     line-height: 2rem;
     text-align: left;  
     margin-right: 10%;
+}
+@media only screen and (max-width: 600px){
+    .me {
+        line-height: 2rem;
+        text-align: center;  
+        margin-left: 10%;
+ }
 }
 /*about me section end*/
 
@@ -404,7 +401,13 @@ h5{
 }
 @media only screen and (max-width: 800px){
     .contacts {
-        margin-top: 40%;
+        margin-top: 60%;
+        justify-content: center;
+        display: flex;}
+}
+@media only screen and (max-width: 400px){
+    .contacts {
+        margin-top: 80%;
         justify-content: center;
         display: flex;}
 }
@@ -467,7 +470,7 @@ textarea {
 }
 .footer ul li a{
     color: #02aab0;
-    padding: 40px;
+    padding: 20px;
     font-size: 50px;
 }
 /*email form section start*/
