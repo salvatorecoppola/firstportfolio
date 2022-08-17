@@ -11,10 +11,15 @@
         </style>
      </head>
 <body>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script defer src="./js/script.js"></script>
+    <script defer type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script defer nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script defer type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <header>
+
 <!--social links-->
+
+
     <div class="navbar">
         <ul class="menu">
             <li><a href="#https://www.instagram.com/scwdeveloper/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
@@ -24,13 +29,29 @@
         </ul>
     </div>
 </header>
+
+
+<!--social links ends-->
+
 <main>
 <!--presentation section--> 
-     <div id="presentation">
-         <div class="description">
-            <h1>Hi, I'm <span style="color: #00cdac;"> Salvatore Coppola </span> <br>
-            I'm a Full Stack Developer student</h1>
+<section class="home">
+    <div class="container">
+       <div class="row">
+           <div class="home-text">
+            <h1>Hi, my name is <span style="color: #00cdac;"> Salvatore Coppola </span>and I'm a <br> </h1>
+                <p class="animate-text">
+                   <span style="color: #00cdac;">Web Developer student</span>
+                   <span style="color: #00cdac;">Barista</span>
+                   <span style="color: #00cdac;">Pastry Chef</span>
+                </p>
+           </div>
+       </div>
+    </div>
+</section>
 <!--cta buttons-->
+
+
          <div class="bio">
                 <ul>
                 <li class="button"><a href='#skills'>
@@ -62,16 +83,24 @@
          </div>       
          </div>          
      </div>
+
+
+<!--cta buttons & presentation ends-->
+
+
             
-<!--parent section skills-->
+<!--parent section skills start-->
     <div class="parentskills">
      
+
 <!--skills section on the left-->
     <div class="skills">
         <p> Competenze ancora in fase di sviluppo.</p>
              
     </div>   
-<!--skills section on the right-->  
+
+
+    <!--skills section on the right-->  
     <div class="imagesskills">
         <h2><a name="skills">Front End</a></h2>
         <div id="images">
@@ -80,19 +109,31 @@
         </div>
     </div>
 </div>
-<!--projects parent section-->
+
+<!--skills section ends-->
+
+
+
+<!--projects parent section start-->
+
+
 <div class="parentprojects">
     <div class="projects">
        <h3><a name="port">Progetti</a></h3>
        <p>Questa sezione attualmente è vuota, ma sto lavorando per aggiornarla con nuovi progetti. Ritorna tra un pò di tempo, troverai sicuramente qualcosa!</p>
    </div>
 </div>
-<!--about me section-->
+
+
+<!--about me section start-->
+
+
 <div class="about"><a name="about"></a>
     <div class="me">
    
        <!--personal photo-->
-      
+     <img src="./assets/tor2.png"  class="img"loading="lazy"width="300px"> 
+    
     </div>
    <div class="mypic"> <h4>About Me</h4>
        <h5>Pasticcere diventato Web Developer.</h5><br>
@@ -105,7 +146,13 @@
       </p>
     </div>
 </div>
-<!--contacts form section-->
+
+<!--about me section end-->
+
+
+<!--contacts form section start-->
+
+
 <div class="contactsparent">
 <div class="contacts">
     
@@ -121,6 +168,10 @@
 </div> 
 </div>
 </main>
+
+<!--contacts form end-->
+
+<!--footer with social start-->
 <footer>
     <div class="footer">
         <ul class="social">
@@ -131,5 +182,6 @@
         </ul>
     </div>
 </footer>
+<!--footer with social end-->
     </body>
 </html>
