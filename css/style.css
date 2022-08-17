@@ -1,12 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@102.8,354&family=Montserrat:ital,wght@0,500;1,200&family=UnifrakturMaguntia&display=swap');
+
 * {
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat';
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
-   
+
 }
+
 h1{
     color: black;
 }
@@ -20,6 +24,9 @@ h2{
 p {
     color: #272341;
 }
+
+/*navbar start syling*/
+
 .navbar {
     background: white ;
 }
@@ -28,13 +35,16 @@ p {
     justify-content: flex-start;
     list-style: none;
 }
+.navbar ul li {
+    padding:10px 20px;
+}
 .navbar ul li a {
     font-size: 50px;
     color:#00cdac;
 }
 @media only screen and (max-width: 400px) {
    .navbar ul {
-      height: 350px; /* Red */
+      height: 350px;
       flex-direction: column;
       text-align: center;
     }
@@ -45,26 +55,79 @@ p {
        margin-left: 10px;
      }
  }
-#presentation{
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top:15%;
-    color: #272341;
-    font-size: 1.5em;
+
+
+.home{
+
+    margin-top: 15%;
 }
-.description{
-    display: flex;
-    width: auto;
-    flex-direction: column;
+
+.home::before{
+    content: '';
+    position: absolute;
+    left:0;
+    width: 100%;
+    height: 100%;
+
+}
+
+.home .home-text{
     text-align: center;
-    margin-bottom: 40px;    
+    position: relative;
+    z-index: 2;
 }
+
+.home .home-text h1{
+   color:#1F2937;
+   font-size: 50px;
+   color:#1F2937;
+   line-height: 56px;
+   font-weight: 700;
+   margin:0 0 20px;
+}
+.home .home-text p{
+   margin:0;
+   overflow: hidden;
+}
+.home .home-text p span{
+   font-size: 3em;
+   color:#1F2937;
+   font-weight: 700;
+   display: inline-block;
+   line-height: 46px;
+   display: none;
+}
+
+.home .home-text p span.text-in{
+   display: block;
+   animation: textIn .5s ease;
+   margin-bottom: 10px;
+}
+.home .home-text p span.text-out{
+   animation: textOut .5s ease;
+}
+@keyframes textIn{
+   0%{
+       transform: translateY(100%);
+   }
+   100%{
+       transform: translateY(0%);
+   }
+}
+@keyframes textOut{
+   0%{
+       transform: translateY(0%);
+   }
+   100%{
+       transform: translateY(-100%);
+
+   }
+}
+
+
 @media only screen and (max-width: 400px) {
     .bio ul {
-       height: 350px; /* Red */
+       height: 350px;
        flex-direction: column;
        text-align: center;
        justify-content: center;
@@ -92,6 +155,7 @@ p {
            justify-content: center; }
 }
 
+/*buttons starts*/
 
 .button {
 
@@ -160,6 +224,11 @@ p {
     color: white;
     text-decoration: none;
 }
+
+/*navbar end*/ /*buttons ends*/
+
+/*skills section start*/
+
 .parentskills{
     flex-direction: row;
     display: flex;
@@ -167,15 +236,18 @@ p {
     align-items: stretch;
     margin-top: 15%;
     max-width: 100%;
+    width: auto;
     background-color: #02aab0;
     background-image: linear-gradient(135deg,#02aab0,#00cdac);
     border-top: 0;
     padding: 7rem 0 27rem;
     margin-bottom: -15rem;
 }
+
 .skills {
     height: 500px;
     width: 400px;
+    margin-left: 10%;
     
 }
 
@@ -184,6 +256,7 @@ p {
     height: 500px;
     width: 400px;
     text-align: center;
+    margin-right: 10%;
 }
 .skills p{
     margin-top: 200px;
@@ -193,6 +266,12 @@ p {
 }
 .css {  height: 100px; width: 100px;
 }
+
+/*skills section end*/
+
+
+/*projects skills start*/
+
 .parentprojects{
     flex-direction: row;
     display: flex;
@@ -200,13 +279,12 @@ p {
     align-items: stretch;
     margin-top: 10%;
     max-width: 100%;
+    width: auto;
     background-color: white;
     padding: 0rem 0 12rem;
 }
 
-.projects h1{
-    margin-bottom: 10%;
-}
+
 
 .projects {
     
@@ -215,10 +293,24 @@ p {
     height: 500px;
     width: 400px;
     align-items: stretch;
-    margin-top: 10%;
+    margin: 30% 10% 0%;
 }
-.projects p{color: #272341}
 
+.projects h3{
+    margin-bottom: 20%;
+    font-size: 50px;
+}
+.projects p{
+    
+    color: #272341;
+    margin-top: 20%;
+
+}
+
+/*projects section end*/
+
+
+/*about me section start*/
 .about{
     flex-direction: row;
     display: flex;
@@ -229,45 +321,76 @@ p {
     background-color: #02aab0;
     background-image: linear-gradient(135deg,#02aab0,#00cdac);
     border-top: 0;
-    padding: 22rem 0 22rem;
-    margin-bottom: -13rem;
+    padding: 22rem 0 15rem;
+    margin-bottom: -12rem;
     -webkit-clip-path: polygon(0 15vh,100% 0,100% 80%,0 100%);
     clip-path: polygon(0 15vh,100% 0,100% 80%,0 100%);
 }
-
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 400px){
     .about {
-        padding: 10% 0 60%;
+        padding: 10% 0 50%;
         height: 100%;
         -webkit-clip-path: none;
-        clip-path: none;}
+        clip-path: none;
+        
+    }
+}
+@media only screen and (max-width: 800px){
+    .about {
+        padding: 10% 0 10%;
+        height: 100%;
+        -webkit-clip-path: none;
+        clip-path: none;
+        
+    }
 }
 .me{
-    flex-direction:column ;
+
     height: 500px;
-    width: 900px;
+    width: 600px;
     align-items: stretch;
+    margin-left: 20%;
+    margin-right: 10%;
 }
+/*img don't available for smartphones and tablets*/
+@media only screen and (max-width: 600px){
+    .img {
+        height: 100%;
+        width: 80%;
+        display: none;
+ }
+}
+
 .about h5,h4,p{
     color: white;
 }
 
 h4{
-    font-size: 1.8em;
+    font-size: 2.8em;
     margin-bottom: 5%;
+    font-style: italic;
+    line-height: 150%;
 }
 h5{
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 .mypic{     
     line-height: 2rem;
     text-align: left;  
+    margin-right: 10%;
 }
+/*about me section end*/
+
+/*email form section start*/
+
 .contactsparent{
     margin: 15% 15% 15%;
     justify-content: center;
     display: flex;
 }
+
+
+
 .contacts{
     display: flex;
     width: 1000px;
@@ -278,6 +401,12 @@ h5{
     max-width: 100%;
     background-color: white;
     margin-top: 10%;
+}
+@media only screen and (max-width: 800px){
+    .contacts {
+        margin-top: 40%;
+        justify-content: center;
+        display: flex;}
 }
 h6{
     font-size: 1.8em;
@@ -310,10 +439,14 @@ textarea {
     border-radius: 2px;
     padding: 8px 12px;
 }
+
+/*email form section end*/
+
+/*email form section start*/
   
 @media only screen and (max-width: 400px) {
     .footer ul  {
-       height: 300px; /* Red */
+       height: 300px; 
        flex-direction: column;
        text-align: center;
  
@@ -337,3 +470,4 @@ textarea {
     padding: 40px;
     font-size: 50px;
 }
+/*email form section start*/
