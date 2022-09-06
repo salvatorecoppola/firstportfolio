@@ -26,32 +26,105 @@ p {
 }
 
 /*navbar start syling*/
+.nav {
+    height: 50px;
+    width: 100%;
+    background-color:transparent;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 
-.navbar {
-    background: white ;
-}
-.navbar ul {
-    display: flex;
-    justify-content: flex-start;
-    list-style: none;
-}
-.navbar ul li {
-    padding:10px 20px;
-}
-.navbar ul li a {
-    font-size: 50px;
-    color:#00cdac;
-}
-@media only screen and (max-width: 400px) {
-   .navbar ul {
-      height: 350px;
-      flex-direction: column;
-      text-align: center;
+  }
+  
+.nav > .nav-header {
+    display: inline;
+  }
+  
+.nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: #272341;
+    padding: 10px 10px 10px 10px;
+  }
+  
+.nav > .nav-btn {
+    display: none;
+  }
+  
+.nav > .nav-links {
+    display: inline;
+    float: right;
+    font-size: 25px;
+  }
+  
+.nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color:black;
+  }
+  
+.nav > .nav-links > a:hover {
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    transition-duration: 200ms;
+    background-color: #00cdac;
+    
+  }
+  
+.nav > #nav-check {
+    display: none;
+  }
+  
+@media (max-width:800px) {
+    .nav > .nav-btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
     }
-}
+.nav > .nav-btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+.nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+.nav > .nav-btn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid #eee;
+    }
+.nav > .nav-links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: #333;
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+    }
+.nav > .nav-links > a {
+      display: block;
+      width: 100%;
+    }
+.nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+    }
+.nav > #nav-check:checked ~ .nav-links {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+    }
+  }
 /*navbar end*/ 
+
+/*title switch*/
 .home{
-    margin-top: 15%;
+    margin: 15% 0 30% 0;
 }
 
 .home .home-text{
@@ -59,9 +132,9 @@ p {
 }
 
 .home .home-text h1{
-   font-size: 50px;
+   font-size: 3.5em;
    color:#1F2937;
-   line-height: 56px;
+   line-height: 70px;
    font-weight: 700;
    margin:0 0 20px;
 }
@@ -70,11 +143,11 @@ p {
    overflow: hidden;
 }
 .home .home-text p span{
-   font-size: 3em;
+   font-size: 5em;
    color:#1F2937;
    font-weight: 700;
    display: inline-block;
-   line-height: 46px;
+   line-height: 100px;
    display: none;
 }
 
@@ -103,37 +176,9 @@ p {
 
    }
 }
+/*title switch end*/
 
-.bio{
-    margin-top: 10%;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-}
-.bio ul{
-    display: flex;
-    padding: 10px;
-    justify-content: flex-end;
-    list-style: none;
-}
 
-@media only screen and (max-width: 826px) { 
-    .bio ul {
-           height: 350px;
-           flex-direction: column;
-           text-align: center;
-           justify-content: center; }
-}
-
-@media only screen and (max-width: 400px) {
-    .bio ul {
-       height: 350px;
-       flex-direction: column;
-       text-align: center;
-       justify-content: center;
- 
-    }
-}
 /*if you have problem with span in h1, try fix height*/
 
 @media only screen and (max-width: 400px) {
@@ -145,77 +190,7 @@ p {
  
     }
 }
-/*buttons starts*/
 
-.button {
-
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    font-size: 17px;
-    padding: 1em 3.7em;
-    font-weight: 500;
-    background: #1F2937;
-    color: white;
-    border: none;
-    position: relative;
-    overflow: hidden;
-    border-radius: 0.6em;
-    margin-right: 10px;
-    margin-bottom: 15px;   
-}
-
- .gradient {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    border-radius: 0.6em;
-    margin-top: -0.25em;
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
-}
-   
-.label {
-    position: relative;
-    top: -1px;
-}
-   
-.transition {
-    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-    transition-duration: 500ms;
-    background-color: #00cdac;
-    border-radius: 9999px;
-    width: 0;
-    height: 0;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-.button a{
-    text-decoration: none;
-    color: white;
-}
-.button:hover .transition {
-    width: 14em;
-    height: 14em;
-    text-decoration: none;
-}
-   
-.button:active {
-    text-decoration: none;
-    color: white;
-    transform: scale(0.97);
-}
-.button a:visited{
-    color: white;
-    text-decoration: none;
-}
-.button a:hover{
-    color: white;
-    text-decoration: none;
-}
-
-/*buttons ends*/
 
 /*skills section start*/
 
