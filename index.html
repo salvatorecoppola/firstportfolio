@@ -10,30 +10,41 @@
             @import url('https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@102.8,354&family=Montserrat:ital,wght@0,500;1,200&family=UnifrakturMaguntia&display=swap');
         </style>
      </head>
+
 <body>
     <script defer src="script.js"></script>
     <script defer type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script defer nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script defer type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+
 <header>
-
-<!--social links-->
-
-
-    <div class="navbar">
-        <ul class="menu">
-            <li><a href="#https://www.instagram.com/scwdeveloper/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
-            <li><a href="https://www.linkedin.com/in/salvatore-coppola-9639b9235/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-            <li><a href="https://github.com/salvatorecoppola"target="_blank"><ion-icon name="logo-github"></ion-icon> </a></li>
-            <li><a href="#"target="_blank"></a><ion-icon name="document-outline"></ion-icon></a></li>
-        </ul>
-    </div>
+<div class="nav">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+          <div class="nav-title">
+            
+          </div>
+        </div>
+        <div class="nav-btn">
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+        
+        <div class="nav-links">
+          <a href="#skills-anchor">Skills</a>
+          <a href="#portfolio-anchor">Projects</a>
+          <a href="#about-anchor">About Me</a>
+          <a href="#contact-anchor">Contact us</a>
+        </div>
+</div>
 </header>
 
-
-<!--social links ends-->
-
 <main>
+
 <!--presentation section--> 
 <section class="home">
     <div class="container">
@@ -48,46 +59,8 @@
            </div>
        </div>
     </div>
+
 </section>
-<!--cta buttons-->
-
-
-         <div class="bio">
-                <ul>
-                <li class="button"><a href='#skills'>
-                    <span class="transition"></span>
-                    <span class="gradient"></span>
-                    <span class="label">Skills</span>
-                </a>
-                </li>
-                <li class="button"><a href='#port'>
-                    <span class="transition"></span>
-                    <span class="gradient"></span>
-                    <span class="label">Portfolio</span>
-                </a>
-                </li>
-                <li class="button"><a href='#about'>
-                    <span class="transition"></span>
-                    <span class="gradient"></span>
-                    <span class="label"> About Me</span>
-                </a>
-                </li>
-                <li class="button"><a href='#cont'>
-                    <span class="transition"></span>
-                    <span class="gradient"></span>
-                    <span class="label">Contacts</span>
-                </a>
-                </li>
-            </ul>  
-              
-         </div>       
-         </div>          
-     </div>
-
-
-<!--cta buttons & presentation ends-->
-
-
             
 <!--parent section skills start-->
     <div class="parentskills">
@@ -101,8 +74,8 @@
 
 
     <!--skills section on the right-->  
-    <div class="imagesskills">
-        <h2><a name="skills">Front End</a></h2>
+    <div class="imagesskills" id="skills-anchor">
+        <h2>Front End</a></h2>
         <div id="images">
             <img class="css" src="./assets/html5.png">
             <img class="html" src="./assets/iconfinder_css3_294692.png"> 
@@ -117,9 +90,9 @@
 <!--projects parent section start-->
 
 
-<div class="parentprojects">
-    <div class="projects">
-       <h3><a name="port">Progetti</a></h3>
+<div class="parentprojects" id="portfolio-anchor">
+    <div class="projects" >
+       <h3>Progetti</a></h3>
        <p>Questa sezione attualmente è vuota, ma sto lavorando per aggiornarla con nuovi progetti. Ritorna tra un pò di tempo, troverai sicuramente qualcosa!</p>
    </div>
 </div>
@@ -128,7 +101,7 @@
 <!--about me section start-->
 
 
-<div class="about"><a name="about"></a>
+<div class="about" id="about-anchor">
     <div class="mypic">
    
        <!--personal photo-->
@@ -153,7 +126,7 @@
 <!--contacts form section start-->
 
 
-<div class="contactsparent">
+<div class="contactsparent" id="contact-anchor">
 <div class="contacts">
     
     <h6><a name="cont">Let's keep in touch</a></h6>
@@ -175,10 +148,10 @@
 <footer>
     <div class="footer">
         <ul class="social">
-            <li><a href="https://www.instagram.com/scwdeveloper/" target="_blank" ><ion-icon name="logo-instagram"></ion-icon></a></li>
-            <li><a href="https://www.linkedin.com/in/salvatore-coppola-9639b9235/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-            <li><a href="https://github.com/salvatorecoppola"target="_blank"><ion-icon name="logo-github"></ion-icon> </a></li>
-            <li><a href="#"target="_blank"></a><ion-icon name="document-outline"></ion-icon></a></li>
+            <li><a href="https://www.instagram.com/scwdeveloper/" rel="noopener" target="_blank" ><ion-icon name="logo-instagram"></ion-icon></a></li>
+            <li><a href="https://www.linkedin.com/in/salvatore-coppola-9639b9235/" rel="noopener" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+            <li><a href="https://github.com/salvatorecoppola" rel="noopener" target="_blank"><ion-icon name="logo-github"></ion-icon> </a></li>
+            <li><a href="#"rel="noopener" target="_blank"></a><ion-icon name="document-outline"></ion-icon></a></li>
         </ul>
     </div>
 </footer>
