@@ -145,33 +145,39 @@ p {
     }
 /*navbar end*/ 
 
+
+
 /*title switch*/
 .home{
-    margin: 15% 0 30% 0;
+    margin-top: 10% ;
 }
 
 .home .home-text{
-    text-align: center;
+    text-align: left;
+    margin-left: 10%;
+    
 }
 
 .home .home-text h1{
    font-size: 3.5em;
    color:#1F2937;
-   line-height: 70px;
+   line-height: 150%;
    font-weight: 700;
-   margin:0 0 20px;
+   margin-bottom: -5%;
+   
 }
 .home .home-text p{
-   margin-bottom:0;
    overflow: hidden;
+   padding-left: 15%;
 }
 .home .home-text p span{
    font-size: 5em;
    color:#1F2937;
-   font-weight: 700;
-   display: inline-block;
+   font-weight: 600;
    line-height: 100px;
    display: none;
+   text-align: left;
+   padding-top:-50%;
 }
 
 .home .home-text p span.text-in{
@@ -225,7 +231,12 @@ p {
  
     }
 }
+.dev { 
 
+    margin-left: 50%;
+    margin-top: -100%;
+    height: 400px; width: 600px;
+}
 
 /*skills section start*/
 
