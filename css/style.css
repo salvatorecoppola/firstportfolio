@@ -1,20 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@102.8,354&family=Montserrat:ital,wght@0,500;1,200&family=UnifrakturMaguntia&display=swap');
 
 * {
-
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat';
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
-
 }
 
-h1{
+h1 {
     color: #1F2937;
 }
-h2{
+
+h2 {
     color: white;
     font-size: 2.4em;
     margin-bottom: 1.5em;
@@ -26,7 +25,7 @@ p {
 }
 
 /*navbar start syling*/
- .nav {
+.nav {
    
     height: 50px;
     width: 100%;
@@ -34,75 +33,71 @@ p {
     position: sticky;
     z-index: 10;
     top: 0px;
-   }
+}
   
-   .nav > .nav-header {
+.nav > .nav-header {
     display: inline;
    
-  }
+}
   
- .nav > .nav-header > .nav-title {
+.nav > .nav-header > .nav-title {
     display: inline-block;
     font-size: 22px;
     color: white;
     padding: 10px 10px 10px 10px;
-    
-  }
+}
   
- .nav > .nav-btn {
+.nav > .nav-btn {
     display: none;
-    
-  }
+}
   
- .nav > .nav-links {
+.nav > .nav-links {
     display: inline;
     float: right;
     font-size: 25px;
-  }
+}
   
- .nav > .nav-links > a {
+.nav > .nav-links > a {
     display: inline-block;
     padding: 13px 10px 13px 10px;
     text-decoration: none;
     color:#1F2937;
-  }
+}
   
- .nav > .nav-links > a:hover {
+.nav > .nav-links > a:hover {
     background-color:#00cdac; ;
-    
-  }
+}
   
- .nav > #nav-check {
+.nav > #nav-check {
     display: none;
-  }
+}
   
-
- 
- .nav > .nav-btn {
+.nav > .nav-btn {
       display: inline-block;
       position: absolute;
       right: 0px;
       top:0%;
-    }
- .nav > .nav-btn > label {
+}
+
+.nav > .nav-btn > label {
       display: inline-block;
       width: 50px;
       height: 50px;
       padding: 13px;
+}
 
-    }
- .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+.nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
       background-color: #00cdac;
-     
-    
-    }
- .nav > .nav-btn > label > span {
+}
+ 
+.nav > .nav-btn > label > span {
       display: block;
       width: 25px;
       height: 10px;
       border-top: 2px solid #eee;
-    }
- .nav > .nav-links {
+}
+
+.nav > .nav-links {
       position: absolute;
       display: block;
       width: 20%;
@@ -113,8 +108,9 @@ p {
       overflow-y: hidden;
       top: 50px;
       right: 0px;
-    }
-    @media (max-width:400px) {
+}
+
+@media (max-width:400px) {
         .nav > .nav-links {
           display:block;
           position: absolute;
@@ -122,72 +118,144 @@ p {
           top: 50px;
           width: 50%;
           height: 100%;
-          background-color: #333333;
+          background-color: #00cdac;
           color: #00cdac;
-        }
-    }
-    @media (max-width:400px) {
+     }
+}
+
+@media (max-width:400px) {
         .nav > .nav-links > a {
           color: #00cdac;
         }
-    }
- .nav > .nav-links > a {
+}
+
+.nav > .nav-links > a {
       display: block;
       width: 100%;
+}
 
-    }
- .nav > #nav-check:not(:checked) ~ .nav-links {
+.nav > #nav-check:not(:checked) ~ .nav-links {
       height: 0px;
-    }
- .nav > #nav-check:checked ~ .nav-links {
+}
+
+.nav > #nav-check:checked ~ .nav-links {
       height: calc(50vh - 20px);
       overflow-y: auto;
-    }
+}
 /*navbar end*/ 
 
 
 
-/*title switch*/
-.home{
-    margin-top: 10% ;
+/*presentation section*/
+.container{
+    flex-direction: row-reverse;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-top: 10%;
+}
+
+@media (max-width: 800px){
+    .container{
+        flex-direction: column-reverse;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: stretch;
+        margin-top: 15%;
+        max-width: 100%;
+        width: auto;
+    }
+}
+
+.row{
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+    max-width: 100%;
 }
 
 .home .home-text{
     text-align: left;
-    margin-left: 10%;
-    
 }
 
+.dev { 
+    height: 100%; 
+    max-width: 100%;
+    -moz-box-shadow: 0px 6px 5px #00cdac;
+    -webkit-box-shadow: 0px 6px 5px #00cdac;
+    box-shadow: 0px 6px 5px #00cdac;
+    -moz-border-radius:100px;
+    -webkit-border-radius:100px;
+    border-radius:300px;
+    margin-right: 15px;
+}
+@media only screen and (max-width: 400px){
+    .dev { 
+        height: 100%; 
+        max-width: 100%;
+        -moz-box-shadow: 0px 6px 5px #00cdac;
+        -webkit-box-shadow: 0px 6px 5px #00cdac;
+        box-shadow: 0px 6px 5px #00cdac;
+        -moz-border-radius:100px;
+        -webkit-border-radius:100px;
+        border-radius:300px;
+        margin:0 10px 0 10px;
+    }
+
+}
+/*end presentation section*/
+
+
+/*title switch start*/
 .home .home-text h1{
    font-size: 3.5em;
    color:#1F2937;
-   line-height: 150%;
+   line-height: 200%;
    font-weight: 700;
-   margin-bottom: -5%;
+   margin-left: 10%;
+   justify-content: center;
+   align-items: center;
    
 }
+
+@media only screen and (max-width: 400px) {
+    .home .home-text h1 {
+     display:flex;
+     align-items: center;
+     font-size: 2.5em;
+     flex-direction: column;
+     text-align: center;
+     margin-left: 0%;
+    }
+}
+
 .home .home-text p{
    overflow: hidden;
-   padding-left: 15%;
 }
+
 .home .home-text p span{
-   font-size: 5em;
+   font-size: 3.5em;
    color:#1F2937;
    font-weight: 600;
    line-height: 100px;
+   text-align: center;
    display: none;
-   text-align: left;
-   padding-top:-50%;
+   margin-left: 10%;
 }
+
 
 .home .home-text p span.text-in{
    display: block;
    animation: textIn .5s ease;
+   
 }
+
 .home .home-text p span.text-out{
    animation: textOut .5s ease;
    
 }
+
+
 @keyframes textIn{
    0%{
        transform: translateY(100%);
@@ -205,17 +273,6 @@ p {
 
    }
 }
-
-@media only screen and (max-width: 400px) {
-    .home h1 {
-       height: 300px;
-       flex-direction: column;
-       text-align: center;
-       justify-content: center;
-       font-size: 2.5em;
- 
-    }
-}
 /*title switch end*/
 
 
@@ -223,19 +280,13 @@ p {
 
 @media only screen and (max-width: 400px) {
     .home .home-text p span {
-       height: 170px;
-       flex-direction: column;
+       height: 200px;
        text-align: center;
-       justify-content: center;
-       font-size: 3em;
+       font-size: 2.8em;
+       margin-left: 0%;
+   
  
     }
-}
-.dev { 
-
-    margin-left: 50%;
-    margin-top: -100%;
-    height: 400px; width: 600px;
 }
 
 /*skills section start*/
@@ -253,12 +304,14 @@ p {
     border-top: 0;
     padding: 7rem 0 27rem;
     margin-bottom: -15rem;
+   
 }
 
 .skills {
     height: 500px;
     width: 400px;
     margin-left: 10%;
+    
     
 }
 
